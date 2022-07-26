@@ -9,6 +9,8 @@ const slides = [
 
 const slideElement = [];
 
+let currentIndex = 0;
+
 const slidesWrapper = document.querySelector('.slides-wrapper');
 slidesWrapper.innerHTML = '';
 console.dir(slidesWrapper);
@@ -47,6 +49,19 @@ console.log(slideElement);
 const arrowNext = document.querySelector('.arrow-next');
 console.log(arrowNext);
 
+const arrowPrew
+
 arrowNext.addEventListener('click', function () {
-    console.log('prossima slide')
+    
+    //creare una classe attiva con l'indice dell'array
+    const slideAttiva = slideElement[currentIndex];
+    
+    //rimuovere la classe attiva
+    slideAttiva.classList.remove('active');
+    console.log(slideAttiva);
+
+    //passare la classe attiva alla prossima immagine
+    const slideSuccessiva = slideElement[++currentIndex];
+    slideSuccessiva.classList.add('active');
+  
 })
