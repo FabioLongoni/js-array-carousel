@@ -47,10 +47,8 @@ console.log(slideElement);
 //creare elemento da ascoltare -arrow-
 
 const arrowNext = document.querySelector('.arrow-next');
-console.log(arrowNext);
 
 const arrowPrew = document.querySelector('.arrow-prev');
-console.log(arrowPrew);
 
 arrowNext.addEventListener('click', function () {
     
@@ -59,7 +57,7 @@ arrowNext.addEventListener('click', function () {
 
     //rimuovere la classe attiva
     slideAttiva.classList.remove('active');
-    console.log(slideAttiva);
+    // console.log(slideAttiva);
 
     //passare la classe attiva alla prossima immagine
     const slideSuccessiva = slideElement[++currentIndex];
@@ -74,10 +72,13 @@ arrowPrew.addEventListener('click', function () {
 
     //rimuovere la classe attiva
     slideAttiva.classList.remove('active');
-    console.log(slideAttiva);
+    // console.log(slideAttiva);
 
     //passare la classe attiva alla precedente immagine
-    const slideSuccessiva = slideElement[--currentIndex];
-    slideSuccessiva.classList.add('active');
-  
+    const slidePrecedente = slideElement[--currentIndex];
+    slidePrecedente.classList.add('active');
+    
+    if (slideElement[0]) {
+        
+    }
 })
