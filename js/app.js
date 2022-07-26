@@ -49,19 +49,35 @@ console.log(slideElement);
 const arrowNext = document.querySelector('.arrow-next');
 console.log(arrowNext);
 
-const arrowPrew
+const arrowPrew = document.querySelector('.arrow-prev');
+console.log(arrowPrew);
 
 arrowNext.addEventListener('click', function () {
     
     //creare una classe attiva con l'indice dell'array
     const slideAttiva = slideElement[currentIndex];
-    
+
     //rimuovere la classe attiva
     slideAttiva.classList.remove('active');
     console.log(slideAttiva);
 
     //passare la classe attiva alla prossima immagine
     const slideSuccessiva = slideElement[++currentIndex];
+    slideSuccessiva.classList.add('active');
+  
+})
+
+arrowPrew.addEventListener('click', function () {
+    
+    //creare una classe attiva con l'indice dell'array
+    const slideAttiva = slideElement[currentIndex];
+
+    //rimuovere la classe attiva
+    slideAttiva.classList.remove('active');
+    console.log(slideAttiva);
+
+    //passare la classe attiva alla precedente immagine
+    const slideSuccessiva = slideElement[--currentIndex];
     slideSuccessiva.classList.add('active');
   
 })
