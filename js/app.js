@@ -60,7 +60,11 @@ arrowNext.addEventListener('click', function () {
     // console.log(slideAttiva);
 
     //passare la classe attiva alla prossima immagine
-    const slideSuccessiva = slideElement[++currentIndex];
+    currentIndex++
+    if (currentIndex > slides.length - 1) {
+        currentIndex = 0;
+    }
+    const slideSuccessiva = slideElement[currentIndex];
     slideSuccessiva.classList.add('active');
   
 })
@@ -75,10 +79,11 @@ arrowPrew.addEventListener('click', function () {
     // console.log(slideAttiva);
 
     //passare la classe attiva alla precedente immagine
-    const slidePrecedente = slideElement[--currentIndex];
+    currentIndex--
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+    const slidePrecedente = slideElement[currentIndex];
     slidePrecedente.classList.add('active');
     
-    if (slideElement[0]) {
-        
-    }
 })
