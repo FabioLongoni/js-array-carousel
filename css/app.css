@@ -46,3 +46,7 @@ ul {
 	transform: translateY(-50%);
 	color: tomato;
 }
+
+.arrows:hover {
+    cursor: pointer;
+}
