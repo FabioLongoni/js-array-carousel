@@ -53,37 +53,40 @@ const arrowPrew = document.querySelector('.arrow-prev');
 arrowNext.addEventListener('click', function () {
     
     //creare una classe attiva con l'indice dell'array
-    const slideAttiva = slideElement[currentIndex];
+    const slideActive = slideElement[currentIndex];
 
     //rimuovere la classe attiva
-    slideAttiva.classList.remove('active');
+    slideActive.classList.remove('active');
     // console.log(slideAttiva);
 
     //passare la classe attiva alla prossima immagine
+    
     currentIndex++
     if (currentIndex > slides.length - 1) {
         currentIndex = 0;
     }
-    const slideSuccessiva = slideElement[currentIndex];
-    slideSuccessiva.classList.add('active');
+    const slideNext = slideElement[currentIndex];
+    slideNext.classList.add('active');
   
 })
 
 arrowPrew.addEventListener('click', function () {
     
     //creare una classe attiva con l'indice dell'array
-    const slideAttiva = slideElement[currentIndex];
+    const slideActive = slideElement[currentIndex];
 
     //rimuovere la classe attiva
-    slideAttiva.classList.remove('active');
+    slideActive.classList.remove('active');
     // console.log(slideAttiva);
 
     //passare la classe attiva alla precedente immagine
+
     currentIndex--
     if (currentIndex < 0) {
         currentIndex = slides.length - 1;
     }
-    const slidePrecedente = slideElement[currentIndex];
-    slidePrecedente.classList.add('active');
+    const slidePrew = slideElement[currentIndex];
+    slidePrew.classList.add('active');
     
 })
+

@@ -50,3 +50,22 @@ ul {
 .arrows:hover {
     cursor: pointer;
 }
+
+.square-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 3px;
+}
+
+.square {
+	width: 10px;
+	height: 5px;
+	background-color: lightgray;
+	border-radius: 5px;
+	cursor: pointer;
+}
